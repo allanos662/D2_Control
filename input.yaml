@@ -1,0 +1,108 @@
+sample: 'DYT055'
+manip: 
+  init:
+    address:
+    OpHi:
+    OpLo:
+    temp:
+    PID:
+      high_temp:
+        P: 42.4
+        I: 24
+        D: 4
+      inter_temp:
+        P: 36.2
+        I: 37
+        D: 6
+      low_temp:
+        P: 53.4
+        I: 86
+        D: 4
+  degas:
+    step_1:
+      type: 'ramp'
+      T_initial: 
+      T_final:
+      rate:
+    step_2:
+      type: 'soak'
+      T_soak: 
+      soak_time:
+    step_3:
+      type: 'ramp'
+      T_initial: 
+      T_final:
+      rate:
+  growth:
+    step_1:
+      type: 'ramp'
+      T_initial: 
+      T_final:
+      rate:
+    step_2:
+      type: 'growth'
+      T_growth: 
+      growth_time:
+  post_growth:
+    step_1:
+      type: 'ramp'
+      T_initial: 
+      T_final:
+      rate:
+    step_2:
+      type: 'growth'
+      T_growth: 
+      growth_time:
+    idle:
+      OpHi:
+      OpLo:
+      temp:
+
+cell_1:
+  init:
+    address:
+    OpHi:
+    OpLo:
+    temp:
+    PID:
+  degas:
+    step_1:
+      type: 'ramp'
+      T_initial: 
+      T_final:
+      rate:
+    step_2:
+      type: 'soak'
+      T_soak: 
+      soak_time:
+    step_3:
+      type: 'ramp'
+      T_initial: 
+      T_final:
+      rate:
+  growth:
+    step_1:
+      type: 'ramp'
+      T_initial: 
+      T_final:
+      rate:
+    step_2:
+      type: 'growth'
+      T_growth: 
+      growth_time:
+  post_growth:
+    step_1:
+      type: 'ramp'
+      T_initial: 
+      T_final:
+      rate:
+    step_2:
+      type: 'growth'
+      T_growth: 
+      growth_time:
+    idle:
+      OpHi:
+      OpLo:
+      temp:
+
+
