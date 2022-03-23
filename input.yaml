@@ -58,51 +58,58 @@ manip:
       OpLo:
       temp:
 
-cell_1:
-  init:
-    address:
-    OpHi:
-    OpLo:
-    temp:
-    PID:
-  degas:
-    step_1:
-      type: 'ramp'
-      T_initial: 
-      T_final:
-      rate:
-    step_2:
-      type: 'soak'
-      T_soak: 
-      soak_time:
-    step_3:
-      type: 'ramp'
-      T_initial: 
-      T_final:
-      rate:
-  growth:
-    step_1:
-      type: 'ramp'
-      T_initial: 
-      T_final:
-      rate:
-    step_2:
-      type: 'growth'
-      T_growth: 
-      growth_time:
-  post_growth:
-    step_1:
-      type: 'ramp'
-      T_initial: 
-      T_final:
-      rate:
-    step_2:
-      type: 'growth'
-      T_growth: 
-      growth_time:
-    idle:
+cell_6:
+  use: 1
+  address : 6
+  type : 'DF'
+  recipe :
+    init:
+      address: 
       OpHi:
       OpLo:
       temp:
+      PID:
+    degas:
+      step_counter : 1
+      step_1:
+        type: 'ramp'
+        T_target: 310
+        rate: 5
+        in_progress : 0
+        complete : 0
+      step_2:
+        type: 'soak'
+        T_soak: 310
+        soak_time: 10
+        time_start: 0
+      step_3:
+        type: 'ramp'
+        T_initial:  310
+        T_final: 300
+        rate: 5
+    growth:
+      step_1:
+        type: 'ramp'
+        T_initial: 
+        T_final:
+        rate:
+      step_2:
+        type: 'growth'
+        T_growth: 
+        growth_time:
+    post_growth:
+      step_1:
+        type: 'ramp'
+        T_initial: 
+        T_final:
+        rate:
+      step_2:
+        type: 'growth'
+        T_growth: 
+        growth_time:
+      idle:
+        OpHi:
+        OpLo:
+        temp:
 
 
